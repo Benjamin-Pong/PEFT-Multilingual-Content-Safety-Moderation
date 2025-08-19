@@ -15,7 +15,7 @@ Reference: Kumar, Priyanshu, et al. "Polyguard: A multilingual safety moderation
 
 # Task 
 
-The Polyguard dataset (Kumar et al., 2025) was developed to train and evaluate safety classifiers covers 17 languages high-resource languages. The task for this dataset is as follows: Given a prompt in a particular language, the prompt and its response are classified as harmful or unharmful (binary classification). If the prompt or response is labelled as harmful, this data instance is also labelled for safety violations (multilabel classification). Safety violations can be found in the the example code in [Constrained Decoding using Pydantic Tools](#constrained-decoding-using-pydantic-tools).
+The Polyguard dataset (Kumar et al., 2025) was developed to train and evaluate safety classifiers covers 17 languages high-resource languages. The task for this dataset is as follows: Given a prompt in a particular language, the prompt and its response are classified as harmful or unharmful (binary classification). If the prompt or response is labelled as harmful, this data instance is also labelled for safety violations (multilabel classification). Safety violations can be found in the the example code in [Constrained Decoding using Pydantic Tools](#constrained-decoding-using-pydantic-tools). They are enumerated from S1 to S14. Note that these were taken from the original task (Kumar et al 2025).
 
 
 # Methods
