@@ -63,7 +63,7 @@ def patched_init(self, *args, **kwargs):
     kwargs.pop('low_cpu_mem_usage', None)
     original_init(self, *args, **kwargs)
 
-# Apply patch
+# Apply patch only for adalora model
 AdaLoraModel.__init__ = patched_init
 
 model_name = "Benjaminpwh/qwen2.5-7b-instruct-poly-adaLORA-6"
@@ -162,14 +162,12 @@ def constrained_inference(data_sample, model):
     """
     # Generate with the structured model
     result = structured_model(text_prompt.strip())  # strip() removes extra whitespace
-
     # Convert enum values to raw strings (e.g., "S1", "S11")
     # Extract only the top safety violation (assumes that the model ranks the violations by probability and this assumption is justified given top_k=1)
     if result.request_violations:
         result.request_violations = [policy.value for policy in result.request_violations]
     if result.response_violations:
         result.response_violations = [policy.value for policy in result.response_violations]
-
 
     return result
 
