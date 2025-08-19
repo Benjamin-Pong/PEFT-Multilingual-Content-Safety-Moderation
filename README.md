@@ -2,6 +2,8 @@
 
 This project is the first comparative study of alternative parameter-efficient finetuning methods to Low Rank Adaptation (LoRA), notably Adaptive Low-Rank Adaptation (AdaLoRA) and Weight-Decomposition Low-Rank Adaptation (DoRA), for downstream multilingual content moderation tasks which is a multi-step classification task. Preliminary proof-of-concept-experimental results on the PolyGuard datasets (Kumar et al.,2025) demonstrate the potential for these alternative parameter-efficient fine-tuning methods in outperforming LoRA and full-finetuning for a subset of content moderation tasks. This study also reveals the challenges of decoder-only models for classification tasks by incorporating In-Context-Learning and Constraint Decoding techniques. More rigorous experiments need to be done to further support the claim that AdaLORA and DORA can both surppass LoRA and full-finetuning for cross-lingual content moderation tasks.
 
+
+
 # Dataset
 
 PolyGuard dataset can be retrieved from Huggingface
@@ -10,6 +12,11 @@ Train split: ToxicityPrompts/PolyGuardMix
 Test split: ToxicityPrompts/PolyGuardPrompts
 
 Reference: Kumar, Priyanshu, et al. "Polyguard: A multilingual safety moderation tool for 17 languages." arXiv preprint arXiv:2504.04377 (2025).
+
+# Task 
+
+The Polyguard dataset (Kumar et al., 2025) was developed to train and evaluate safety classifiers covers 17 languages high-resource languages. The task for this dataset is as follows: Given a prompt in a particular language, the prompt and its response are classified as harmful or unharmful (binary classification). If the prompt or response is labelled as harmful, this data instance is also labelled for safety violations (multilabel classification). Safety violations can be found in the the example code in [Constrained Decoding using Pydantic Tools][# Constrained Decoding using Pydantic Tools].
+
 
 # Methods
 
@@ -25,7 +32,7 @@ Individual scripts for these different modes of fine-tuning modes were adapted f
 ## In-context Learning
 
 
-## Constrained Decoding using Pydantic tools
+## Constrained Decoding using Pydantic Tools
 
 
 Due to the verbosity of LLMs, they may not be the best use case for classification tasks. LLMs tend to predict a lot more text eventhough it has been instructed to predict a single label/word. To circumvent this issue, I implemented a class using Pydantic to constrain the output of the LLM at inference time, such that it is able to produce key label predictions for prompt harms, the response harm, prompt violation label(s) and response violation label(s).
