@@ -156,6 +156,13 @@ On the other hand, determining prompt and response violations is a multilabel cl
 
 # Results
 
+| Model | Prompt harm label (F1) | Response harm label (F1) | Refusal label (F1) | Prompt Violations (Jaccard) | Response Violations (Jaccard) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Full Fine-tuning** | 0.31 | 0.63 | 0.25 | 0.3 | 0.59 |
+| **LoRA** | 0.36 | 0.48 | 0.45 | 0.48 | 0.71 |
+| **AdaLoRA** | 0.49 | 0.64 | 0.23 | 0.34 | 0.50 |
+| **DoRA** | 0.46 | 0.40 | 0.31 | 0.45 | 0.42 |
+
 
 # Limitations and Future Work
 
