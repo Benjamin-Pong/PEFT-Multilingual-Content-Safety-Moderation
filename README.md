@@ -16,7 +16,7 @@ Cite: Kumar, Priyanshu, et al. "Polyguard: A multilingual safety moderation tool
 Experiments include full-parameter fine-tuning, DoRA and AdaLoRA fine-tuning using the PolyGuard datasets on Qwen2.5-7B-Instruct. Performance of these individual models were compared against polyGuard (which was finetuned using LoRA).
 
 Individual scripts for these different modes of fine-tuning modes were adapted from Unsloth and can be found in the repository as follow:
-1. Full-parameter fine-tuning
-2. AdaLoRA fine-tuning
-3. DoRA finetuning
+1. Full-parameter fine-tuning: /qwen_full_finetuning.py
+2. AdaLoRA fine-tuning: /qwen_adalora_finetuning.py
+3. DoRA finetuning: /qwen_dora_finetuning.py
 
