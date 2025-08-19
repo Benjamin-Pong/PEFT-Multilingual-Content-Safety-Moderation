@@ -5,4 +5,11 @@ results on the PolyGuard datasets (Kumar et al.,2025) demonstrate the potential 
 
 # Dataset
 
-PolyGuard dataset can be retrieved from Huggingface: ToxicityPrompts/PolyGuardMix
+PolyGuard dataset can be retrieved from Huggingface
+
+Train split: ToxicityPrompts/PolyGuardMix
+Test split: ToxicityPrompts/PolyGuardPrompts
+
+Cite: Kumar, Priyanshu, et al. "Polyguard: A multilingual safety moderation tool for 17 languages." arXiv preprint arXiv:2504.04377 (2025).
+
+
