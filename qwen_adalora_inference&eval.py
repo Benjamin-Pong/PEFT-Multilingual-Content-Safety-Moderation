@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Script for AdaLoRA finetuning
+Script for inference, and implementation of Pydantic class for Constrained Decoding
 """
 
 # Load model directly
