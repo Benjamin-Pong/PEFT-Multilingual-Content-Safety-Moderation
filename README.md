@@ -163,6 +163,15 @@ On the other hand, determining prompt and response violations is a multilabel cl
 | **AdaLoRA** | 0.49 | 0.64 | 0.23 | 0.34 | 0.50 |
 | **DoRA** | 0.46 | 0.40 | 0.31 | 0.45 | 0.42 |
 
+- Best for Violation Identification (Jaccard Score): The LoRA fine-tuned model performed best at identifying the exact policy violations, with the highest Jaccard scores of 0.48 for prompt violations and 0.71 for response violations.
+
+- Best for Binary Harm Detection (F1 Score): The AdaLoRA fine-tuned model was the most accurate for the binary classification of harmful content, achieving the top F1 scores of 0.49 for prompt harm labels and 0.64 for response harm labels. However, it was less effective at determining the specific violation types.
+  
+- Mid-Range Performer: The DoRA fine-tuned model showed competitive, mid-range performance, closely trailing AdaLoRA in prompt harm classification (0.46 F1) and matching LoRA's effectiveness in identifying prompt violations.
+  
+- Baseline Comparison: Standard full fine-tuning was the least effective method across all evaluated metrics compared to the parameter-efficient approaches.
+
+
 
 # Limitations and Future Work
 
